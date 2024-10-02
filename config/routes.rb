@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get("/directors/eldest", { :controller => "directors", :action => "min_dob" })
 
   get("/directors", { :controller => "directors", :action => "index" })
+  get("/insert_director", {:controller => "directors", :action => "create"})
+  get("/update_director/:path_id", {:controller => "directors", :action => "update"})
+  get("/delete_director/:path_id", {:controller => "directors", :action => "destroy"})
   get("/directors/:path_id", { :controller => "directors", :action => "show" })
 
   get("/movies", { :controller => "movies", :action => "index" })
